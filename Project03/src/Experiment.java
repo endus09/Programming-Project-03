@@ -4,11 +4,13 @@ public class Experiment {
 String name;
 int weight;
 int rating;
+int ratio;
 
 // initializing
     public Experiment(String n, int w, int r){
-        n = name;
-        w = weight;
-        r = rating;
+        name = n;
+        weight = w;
+        rating = r;
+        ratio = w/r;
     }
 }
