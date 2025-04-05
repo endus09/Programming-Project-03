@@ -1,4 +1,8 @@
-// by Markus Gulla
+/*
+ * @author Markus Gulla
+ * 
+ * 
+ */
 
 public class Cargo {
 int weight;

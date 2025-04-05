@@ -1,3 +1,8 @@
+/*
+ * @author Markus Gulla
+ * 
+ */
+
 public class Project03 {
     public static void main(String[] args) throws Exception {
         Experiment[] n = new Experiment[12];
