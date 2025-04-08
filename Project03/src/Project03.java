@@ -1,3 +1,5 @@
+
+
 /*
  * @author Markus Gulla
  * 
@@ -6,6 +8,7 @@
 public class Project03 {
     public static void main(String[] args) throws Exception {
         Experiment[] n = new Experiment[12];
+        Cargo c = new Cargo();
 
         n[0] = new Experiment("Cloud Patterns", 36, 5);
         n[1] = new Experiment("Solar Flares", 264, 9);
@@ -20,5 +23,8 @@ public class Project03 {
         n[10] = new Experiment("Cosmic Rays", 80, 7);
         n[11] = new Experiment("Yeast Fermentation", 27, 4);
 
+        for (int i = 0; i < n.length; i++){
+            System.out.print(c.add(n[i]));
+        }
     }
 }
