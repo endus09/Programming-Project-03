@@ -1,5 +1,4 @@
-// Selection sort in Java
-// From Programiz 
+// @author Revised by Caleb Park
 import java.util.Comparator;
 
 public class SelectionSort {
