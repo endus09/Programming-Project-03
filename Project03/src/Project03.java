@@ -80,7 +80,7 @@ public class Project03
         System.out.println();
         System.out.println("Total Rating: " + bruteRatings[bruteHighestIndex]);
         System.out.println("Total Weight: " + bruteWeights[bruteHighestIndex]);
-        System.out.printf("\n==============================================\n\n");
+        System.out.printf("\n==============================================\n");
 
         for (int i = 0; i < 12; i++)
         {
