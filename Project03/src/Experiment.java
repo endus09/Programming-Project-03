@@ -7,14 +7,31 @@ public class Experiment implements Comparable<Experiment> {
 	private int weight;
 	private int rating;
 	private int ratio;
+	private boolean inclusion;
 	
 	public Experiment(String name, int weight, int rating) {
 		this.name = name;
 		this.weight = weight;
 		this.rating = rating;
 		this.ratio = weight / rating;
+		this.inclusion = true;
 	}
 	
+	// include or exclude experiment
+	public void include(boolean b){
+		if (b == true){
+			this.inclusion = true;
+		}
+		else{
+			this.inclusion = false;
+		}
+	}
+
+	// return inclusion
+	public boolean getInclusion(){
+		return inclusion;
+	}
+
 	/**
 	 * @return the name
 	 */
