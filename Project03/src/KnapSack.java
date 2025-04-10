@@ -1,5 +1,8 @@
 import java.util.Arrays;
 
+/*
+ * @author revised by: Julian Cumba
+ */
 public class KnapSack{
 
     public void knapDynamic (Experiment[] cargo){
