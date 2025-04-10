@@ -1,8 +1,9 @@
 /*
- * @author Markus
- * 
+ * @author Markus Gulla 
  */
 
+
+ // This class creates 4096 boolean arrays of 12 with every single possible combination
  public class BinaryArrays
  {
  
@@ -36,23 +37,23 @@
              }
          }
      }
-
+ 
      // get boolean
-
-     public boolean getBool(int index, int test){
-        return arrays[index][test];
+     public boolean getBool(int index, int test)
+     {
+         return arrays[index][test];
      }
-
+ 
      // test tool
-
-     public String arrayPrint(int n){
-        String print = "";
-        for (int i = 0; i < 12; i++){
-            print += arrays[n][i] + " ";
-        }
-        return print;
+     public String arrayPrint(int n)
+     {
+         String print = "";
+         for (int i = 0; i < 12; i++)
+         {
+             print += arrays[n][i] + " ";
+         }
+         return print;
      }
  
  }
  
- // fix

@@ -1,7 +1,5 @@
 /*
  * @author Markus Gulla
- * 
- * 
  */
 
  public class Cargo
