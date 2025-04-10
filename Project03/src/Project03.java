@@ -73,37 +73,39 @@ public class Project03 {
 
 
 
-
-
-
-
-
-
-
-System.out.println();
-System.out.println();
-        System.out.println("Before sorting:");
-        for (Experiment e : n) {
-        	System.out.println(e);
-        }
-         System.out.println();
+        SelectionSort.sort(n, Experiment.BY_WEIGHT);
+        System.out.println("Subset Based on Weight:");      
+        printResults(n);    
+        					
+        SelectionSort.sort(n, Experiment.BY_RATING);
+        System.out.println("Subset Based on Rating:");
+        printResults(n);      
         
+        SelectionSort.sort(n, Experiment.BY_RATIO);
+        System.out.println("Based on Rating/Weight Ratio:");
+        printResults(n);
 
 
-        System.out.println("After sorting:");
-        for (Experiment e : n) {
-        	System.out.println(e);
-        }
-        
-        /*
-        System.out.println("After sorting by age: " + experiments);
-        for (int i = 0; i < n.length; i++){
-            System.out.print(c.add(n[i]));
-        }
-        */
 
-        // debugging Binary Arrays
-         System.out.println();
-         System.out.println(b.arrayPrint(4095));
+
     }
+    // Prints the subset of experiments and total rating 
+    private static void printResults(Experiment[] experiments) {
+        // Reset weight and rating to 0
+        int weight = 0;
+        int rating = 0;
+        System.out.printf("==============================================\n");
+        System.out.printf("Experiment: %-16s Weight: %-1s Rating:\n", "", "");
+        System.out.printf("----------- %-16s ------- %-1s -------\n", "", "");
+        for (Experiment e : experiments) {
+            if (weight + e.getWeight() <= 700) {
+                weight += e.getWeight();
+                rating += e.getRating();
+                System.out.println(e);
+            }
+        }
+        System.out.printf("\nTotal Rating: " + rating);
+        System.out.printf("\n\n==============================================\n");
+    }
+
 }

@@ -2,18 +2,23 @@
  * @author Markus Gulla
  * @author Jasmine Bonitz
  */
+import java.util.Comparator;
 public class Experiment implements Comparable<Experiment> {
 	private String name;
 	private int weight;
 	private int rating;
-	private int ratio;
+	private double ratio;
 	private boolean inclusion;
+
+	public static final Comparator<Experiment> BY_WEIGHT = Comparator.comparingInt(Experiment::getWeight);
+	public static final Comparator<Experiment> BY_RATING = Comparator.comparingInt(Experiment::getRating).reversed();
+	public static final Comparator<Experiment> BY_RATIO = Comparator.comparingDouble(Experiment::getRatio).reversed();
 	
 	public Experiment(String name, int weight, int rating) {
 		this.name = name;
 		this.weight = weight;
 		this.rating = rating;
-		this.ratio = weight / rating;
+		this.ratio = rating / (double)weight;
 		this.inclusion = true;
 	}
 	
@@ -51,13 +56,14 @@ public class Experiment implements Comparable<Experiment> {
 	/**
 	 * @return the ratio
 	 */
-	public int getRatio() {
+	public double getRatio() {
 		return ratio;
 	}
 
 	@Override
 	public String toString() {
-		return "Experiment: " + name + ", Weight: " + weight + ", Rating: " + rating + "]";
+		//return "Experiment: " + name + ", Weight: " + weight + ", Rating: " + rating + "]";
+		return String.format("%-25s %7s %8s", name, weight, rating);
 	}
 
 	@Override
