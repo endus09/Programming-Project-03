@@ -19,12 +19,7 @@ public class Experiment implements Comparable<Experiment> {
 	
 	// include or exclude experiment
 	public void include(boolean b){
-		if (b == true){
-			this.inclusion = true;
-		}
-		else{
-			this.inclusion = false;
-		}
+		this.inclusion = b;
 	}
 
 	// return inclusion

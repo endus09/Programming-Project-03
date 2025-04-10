@@ -66,6 +66,9 @@ public class Project03 {
         System.out.println("Total Rating: " + bruteRatings[bruteHighestIndex]);
         System.out.println("Total Weight: " + bruteWeights[bruteHighestIndex]);
 
+        for (int i = 0; i < 12; i++){
+            n[i].include(true);
+        }
 
 
 
@@ -77,6 +80,8 @@ public class Project03 {
 
 
 
+System.out.println();
+System.out.println();
         System.out.println("Before sorting:");
         for (Experiment e : n) {
         	System.out.println(e);
