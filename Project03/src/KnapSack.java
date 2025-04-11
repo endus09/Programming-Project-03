@@ -2,7 +2,6 @@
  * @author revised by: Julian Cumba
  * @author Fabian Terh - Medium.com
  */
-import java.util.Arrays;
 public class KnapSack{
 
     public static void knapDynamic (Experiment[] cargo){
@@ -53,16 +52,15 @@ public class KnapSack{
      * If they were added, it prints them.
      */
     private static void printKnapSack(Experiment[] cargo, int n, int[] ratings, int[] weights, int[][] mat) {
-        //System.out.println(Arrays.deepToString(mat)); // Visualization of the table  ---> UN-COMMENT THIS TO SEE MATRIX VISUAL REPRESENTATION
+      //  System.out.println(Arrays.deepToString(mat)); // Visualization of the table  ---> UN-COMMENT THIS TO SEE MATRIX VISUAL REPRESENTATION
 
         // -----------------------------Print out the Results-------------------------------\\
         int capacity = 700;
         int totalWeight = 0;
         int totalRating = 0;
 
-        System.out.println("==============================================\n");
-        System.out.println("Subset Based on 0/1 KnapSack Solution:\n");
-        System.out.println("==============================================\n");
+        System.out.print("Subset Based on 0/1 KnapSack Solution:\n");
+        System.out.print("==============================================\n");
         System.out.printf("%-30s %-9s %-7s%n", "Experiment:", "Weight:", "Rating:");
         System.out.printf("%-30s %-9s %-7s%n", "-----------", "-------", "-------");
 
@@ -81,8 +79,9 @@ public class KnapSack{
                 capacity -= itemWeight;
             }
         }
-        System.out.println("\nTotal Rating: " + totalRating);
-        System.out.println("\nTotal Weight: " + totalWeight);
-        System.out.println("\n");
+        System.out.print("\nTotal Rating: " + totalRating);
+        System.out.print("\nTotal Weight: " + totalWeight);
+        System.out.print("\n");
+        System.out.print("==============================================\n");
     }
 }
