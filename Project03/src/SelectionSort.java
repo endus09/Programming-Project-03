@@ -1,4 +1,5 @@
-// @author Revised by Caleb Park
+// @author Revised by Caleb Park 
+// (Code from Progamiz)
 import java.util.Comparator;
 
 public class SelectionSort {
