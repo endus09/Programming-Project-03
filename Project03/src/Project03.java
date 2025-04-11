@@ -100,6 +100,8 @@ public class Project03
         System.out.println("Based on Rating/Weight Ratio:");
         printResults(n);
 
+
+        KnapSack.knapDynamic(n);
     }
 
     // Prints the subset of experiments and total rating 
